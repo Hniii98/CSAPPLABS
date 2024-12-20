@@ -310,7 +310,7 @@ int howManyBits(int x) {
 ------
 
 浮点数的实现大多数依赖如下图示：
-![](C:\Users\MMM\Desktop\屏幕截图 2024-12-20 124800.png)
+![](ieee745float.png)
 
 
 ### floatScale2
