@@ -334,7 +334,7 @@ int floatFloat2Int(unsigned uf) {
 	unsigned expBits = (uf >> 23) & 0x000000FFu;
 	unsigned fracBits = uf & 0x007FFFFFu;
 	unsigned signBit = (uf >> 31) & 0x1u;
-	unsigned Bias = 127; // 2 ^ (k-1) - 1 = 12
+	unsigned Bias = 127; // 2 ^ (k-1) - 1 = 127
 	unsigned normE; // normalized number's E, E = exp - Bias
 	unsigned normM; // normalized number's M, M = 1.frac
 					
@@ -353,7 +353,7 @@ int floatFloat2Int(unsigned uf) {
 		else
 			return ~(normM >> (23 - normE)) + 1; // negative number
 	}
-	if(normE >= 24 && normE <= 31)
+	if(normE >= 24 && normE <= 30)
 	{
 		if(!signBit)
 			return normM << (normE - 23); // positive number
