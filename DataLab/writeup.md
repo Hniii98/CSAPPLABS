@@ -92,7 +92,7 @@ int isTmax(int x) {
  * allOddBits - return 1 if all odd-numbered bits in word set to 1
  *   where bits are numbered from 0 (least significant) to 31 (most significant)
  *   Examples allOddBits(0xFFFFFFFD) = 0, allOddBits(0xAAAAAAAA) = 1
- *   Legal ops: ! ~ & ^ | + << >>
+ *   Legal ops: ! ~ & ^ | + << >
  *   Max ops: 12
  *   Rating: 2
  */
